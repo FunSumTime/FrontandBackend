@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <form action="">
+      <label for="input_name">Trail Name:</label>
+      <input type="text" id="input_name" />
+      <label for="input_description">Trail Description:</label>
+      <input type="text" id="input_description" />
+      <label for="input_rating">Trail rating</label>
+      <input type="number" id="input_rating" />
+      <label for="input_length">Trail Length</label>
+      <input type="number" id="input_length" />
+      <!-- when you have a button in a form it will wipe the whole thing -->
+      <!-- when we give the button itself the type button it prevents this from happening -->
+      <button id="trial_submit_button" type="button">Submit</button>
+    </form>
+    <h2>Trail Reviews</h2>
+    <!-- put our trails here -->
+    <div id="trial_reviews"></div>
+    <!-- <div>
+      <h3>trail tittle</h3>
+      <p>description</p>
+      <p>rating</p>
+    </div> -->
+  </body>
+  <!-- link the javascript -->
+  <script src="./app.js"></script>
+</html>

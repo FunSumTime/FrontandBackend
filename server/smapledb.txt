@@ -1,0 +1,8 @@
+[{"name": "cathedral gorge", "description": "fun hike", "length": 8, "rating": 7}, 
+{"name": "zion narrows", "description": "slot canyon river hike", "length": 10, "rating": 9}, 
+{"name": "angels landing", "description": "steep climb with chains", "length": 5, "rating": 10}, 
+{"name": "snow canyon loop", "description": "red rock and lava flows", "length": 6, "rating": 8}, 
+{"name": "bristlecone trail", "description": "high elevation forest", "length": 3, "rating": 7}, 
+{"name": "emerald pools", "description": "waterfalls and pools", "length": 4, "rating": 8}, 
+{"name": "pioneer park", "description": "easy hike with rock scrambling", "length": 2, "rating": 6}, 
+{"name": "testing ", "description": "a ", "length": "67", "rating": "13"}]
