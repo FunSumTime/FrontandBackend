@@ -18,11 +18,14 @@ function load() {
     });
   });
 }
+// for every delete button onclick it will get rid of it
+
 function load_trails(trail) {
   let div = document.createElement("div");
   let h3 = document.createElement("h3");
   let p = document.createElement("p");
   let p2 = document.createElement("p");
+  let delete_btn = document.createElement("button");
   trails_div.append(div);
   div.append(h3);
   div.append(p);
@@ -30,8 +33,27 @@ function load_trails(trail) {
   h3.innerHTML = trail.name;
   p.innerHTML = trail.description;
   p2.innerHTML = trail.length;
+  delete_btn.innerHTML = "DELETE";
+  div.append(delete_btn);
+  delete_btn.onclick = function () {
+    let id = trail.id;
+    console.log("you are going to delete ", id);
+    // putting it within the url as we do with our naming conventions
+    // but since its not simple we need to do a preflight
+
+    fetch("http://localhost:5000/trials/" + id, {
+      method: "DELETE",
+      headers: {
+        "Content-Type": "application/x-www-form-urlencoded",
+      },
+    }).then(function () {
+      console.log("Deleted");
+      load();
+    });
+  };
 }
 
+function do_delete(id) {}
 function addNewTrail() {
   //get the form data
   let name = document.querySelector("#input_name").value;
@@ -54,6 +76,7 @@ function addNewTrail() {
   data += "&length=" + encodeURIComponent(length);
   // read the rest of the cors policy page
 
+  // send to api
   fetch("http://localhost:5000/trials", {
     method: "POST",
     body: data,
